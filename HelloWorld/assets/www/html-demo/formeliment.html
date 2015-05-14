@@ -1,0 +1,87 @@
+<form>
+    <input id="filter-for-listview" data-type="search" placeholder="Type to search...">
+</form>
+<ul data-role="listview" data-inset="true" data-filter="true" data-input="#filter-for-listview">
+    <li><a href="#">Acura</a></li>
+    <li><a href="#">Audi</a></li>
+    <li><a href="#">BMW</a></li>
+    <li><a href="#">Cadillac</a></li>
+    <li><a href="#">Ferrari</a></li>
+</ul>
+
+
+<form>
+    <label for="textinput-s">Text Input:</label>
+    <input type="text" name="textinput-s" id="textinput-s" placeholder="Text input" value="" data-clear-btn="true">
+    <label for="select-native-s">Select:</label>
+    <select name="select-native-s" id="select-native-s">
+        <option value="small">One</option>
+        <option value="medium">Two</option>
+        <option value="large">Three</option>
+    </select>
+    <label for="slider-s">Input slider:</label>
+    <input type="range" name="slider-s" id="slider-s" value="25" min="0" max="100" data-highlight="true">
+</form>
+<!-- button markup -->
+ <div class="ui-input-btn ui-btn ui-corner-all ui-shadow">
+        Input value
+        <input type="button" data-enhanced="true" value="Input value">
+    </div>
+<form>
+    <input type="button" value="Has corners by default">
+    <input type="button" data-corners="false" value="Unset corners">
+    <div class="ui-input-btn ui-btn ui-corner-all">
+        Enhanced
+        <input type="button" data-enhanced="true" value="Enhanced">
+    </div>
+</form>
+<!--  rounded icons only-->
+<form>
+    <input type="button" data-icon="delete" data-iconpos="notext" value="Icon only">
+    <div id="custom-border-radius">
+        <div class="ui-input-btn ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all">
+            Enhanced - Icon only
+            <input type="button" data-enhanced="true" value="Enhanced - Icon only">
+        </div>
+    </div>
+</form>
+<!-- inline buttons -->
+<form>
+    <input type="button" data-inline="true" value="Input">
+    <div class="ui-input-btn ui-btn ui-btn-inline">
+        Enhanced
+        <input type="button" data-enhanced="true" value="Enhanced">
+    </div>
+</form>
+
+
+<!-- iconised button -->
+<form>
+    <input type="button" data-icon="delete" value="Input">
+    <div class="ui-input-btn ui-btn ui-icon-delete ui-btn-icon-left">
+        Enhanced
+        <input type="button" data-enhanced="true" value="Enhanced">
+    </div>
+</form>
+<!-- disabled button -->
+<form>
+    <input type="button" disabled="" value="Input button with disabled attribute">
+    <div class="ui-input-btn ui-btn ui-state-disabled">
+        Enhanced
+        <input type="button" disabled="" data-enhanced="true" value="Enhanced">
+    </div>
+</form>
+
+<a href="#" class="ui-btn">Anchor</a>
+
+<a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-star">Inline + icon</a>
+<a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-b ui-mini">Mini + theme</a>
+<a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-icon-plus ui-btn-icon-notext ui-btn-b ui-mini">icon only button</a>
+
+<!-- horizontally rouped buttons -->
+
+<div data-role="controlgroup" data-type="horizontal" data-mini="true">
+    <a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-plus ui-btn-b">Add</a>
+    <a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-delete ui-btn-b">Delete</a>
+    <a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-grid ui-btn-b">More</a>
+</div>

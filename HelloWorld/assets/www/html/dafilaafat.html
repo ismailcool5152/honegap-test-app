@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"  href="../css/app.css">
+<link rel="stylesheet"  href="../css/jquery.mobile-1.4.5.min.css">
+<script src="../js/jquery.js"></script>
+<script src="../js/jqm.js"></script>
+</head>
+<body>
+
+
+<!--subhana1  -->
+<div data-role="page" id="subhana">
+
+	<div data-role="header">
+		<a data-ajax='false' href="../index.html" class='ui-btn ui-icon-home ui-btn-icon-left ui-btn-icon-notext'></a><h1>Daf Il Aafat</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		 			<div data-role="tabs" id="tabs">
+	 			
+	 			<div data-role="navbar">
+	 					<ul>
+	 						<li><a href="#one" class='ui-btn-active' data-ajax="false">Page 1</a></li>
+							<li><a href="#two"   data-ajax="false">Page 2</a></li>
+						</ul>
+				</div>
+						<div id="one" class="ui-body-d ui-content">
+							<img src="../img/dafil-aafat/dafil-aafat1.jpg" >
+						</div>
+						<div id="two" class="ui-body-d ui-content">
+							<img src="../img/dafil-aafat/dafil-aafat2.jpg" >
+						</div>
+			</div>
+ 	</div>
+</div><!-- /page -->
+</body>
+<script src="../js/app.js"></script>
+<script>
+$(document).on("pagecreate",function(){
+  	$("#selectDocument").on("change",function(){
+  		var a = $("#selectDocument").val();
+  		var b =""+a+".html";
+  		$.mobile.pageContainer.pagecontainer("change", b);
+  	});
+  	$("img").on("swipeleft",function(){
+  		var id = $(".ui-btn-active").attr('id');
+  		var genericid = id.slice(0,6);
+  		var rid = id.slice(6);
+  		var nid =  parseInt(rid) -1 ;
+  		if($($("#"+genericid+nid)).size() > 0){
+  			$("#"+genericid+nid).click();
+  		}else{
+  			alert("page limit");
+  		}
+  	});
+	$("img").on("swiperight",function(){
+		var id = $(".ui-btn-active").attr('id');
+  		var rid = id.slice(6);
+  		var genericid = id.slice(0,6);
+  		var nid =  parseInt(rid) +1 ;
+  		if( $($("#"+genericid+nid)).size() > 0){
+  			$("#"+genericid+nid).click();
+  		}else{
+  			alert("page limit");
+  		}
+	});
+});
+</script>
+</html>
